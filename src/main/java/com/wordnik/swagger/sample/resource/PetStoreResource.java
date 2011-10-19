@@ -14,12 +14,12 @@ public class PetStoreResource extends JavaHelp {
 
 	@GET
 	@Path("/order/{orderId}")
-	@ApiOperation(value = "Find purchase order by ID", notes = "For valid response try integer IDs with value <= 5. "
-			+ "Anything above 5 or nonintegers will generate API errors", responseClass = "com.wordnik.swagger.sample.model.Order")
+	@ApiOperation(value = "Find purchase order by ID", notes = "For valid response try integer IDs with value <= 5 or > 10. "
+			+ "Other values will generated exceptions", responseClass = "com.wordnik.swagger.sample.model.Order")
 	@ApiErrors(value = { @ApiError(code = 400, reason = "Invalid ID supplied"),
 			@ApiError(code = 404, reason = "Order not found") })
 	public Response getOrderById(
-			@ApiParam(value = "ID of pet that needs to be fetched", required = true) @PathParam("orderId") String orderId)
+			@ApiParam(value = "ID of pet that needs to be fetched", allowableValues = "rangeExclusive(6,10)", required = true) @PathParam("orderId") String orderId)
 			throws NotFoundException {
 		Order order = storeData.findOrderById(ru.getLong(0, 10000, 0, orderId));
 		if (null != order) {
@@ -46,7 +46,7 @@ public class PetStoreResource extends JavaHelp {
 	@ApiErrors(value = { @ApiError(code = 400, reason = "Invalid ID supplied"),
 			@ApiError(code = 404, reason = "Order not found") })
 	public Response deleteOrder(
-			@ApiParam(value = "ID of the order that needs to be deleted", required = true) @PathParam("orderId") String orderId) {
+			@ApiParam(value = "ID of the order that needs to be deleted", allowableValues = "range(1,10)", required = true) @PathParam("orderId") String orderId) {
 		storeData.deleteOrder(ru.getLong(0, 10000, 0, orderId));
 		return Response.ok().entity("").build();
 	}

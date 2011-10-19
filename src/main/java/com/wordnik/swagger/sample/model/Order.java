@@ -33,6 +33,7 @@ public class Order {
 	private int quantity;
 	private Date shipDate;
 	private String status;
+    private boolean complete;
 
 	@XmlElement(name = "id")
 	public long getId() {
@@ -42,6 +43,15 @@ public class Order {
 	public void setId(long id) {
 		this.id = id;
 	}
+
+    public boolean isComplete() {
+        return complete;
+    }
+
+    public void setComplete(boolean complete) {
+        this.complete = complete;
+    }
+
 
 	@XmlElement(name = "petId")
 	public long getPetId() {

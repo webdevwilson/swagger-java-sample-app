@@ -30,6 +30,12 @@ public class StoreData {
 		orders.add(createOrder(3, 2, 2, new Date(), "placed"));
 		orders.add(createOrder(4, 2, 2, new Date(), "delivered"));
 		orders.add(createOrder(5, 3, 2, new Date(), "placed"));
+        orders.add(createOrder(11, 3, 2, new Date(), "placed"));
+        orders.add(createOrder(12, 3, 2, new Date(), "placed"));
+        orders.add(createOrder(13, 3, 2, new Date(), "placed"));
+        orders.add(createOrder(14, 3, 2, new Date(), "placed"));
+        orders.add(createOrder(15, 3, 2, new Date(), "placed"));
+        
 	}
 
 	public Order findOrderById(long orderId) {
