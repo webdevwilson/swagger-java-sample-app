@@ -19,7 +19,7 @@ public class PetResource extends JavaHelp {
 	@ApiErrors(value = { @ApiError(code = 400, reason = "Invalid ID supplied"),
 			@ApiError(code = 404, reason = "Pet not found") })
 	public Response getPetById (
-			@ApiParam(value = "ID of pet that needs to be fetched", required = true) @PathParam("petId") String petId) 
+			@ApiParam(value = "ID of pet that needs to be fetched", allowableValues = "range[1,5]", required = true) @PathParam("petId") String petId) 
 	throws NotFoundException {
 		Pet pet = petData.getPetbyId(ru.getLong(0, 100000, 0, petId));
 		if (null != pet) {
