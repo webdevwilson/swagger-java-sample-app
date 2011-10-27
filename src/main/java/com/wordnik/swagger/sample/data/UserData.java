@@ -51,11 +51,15 @@ public class UserData {
 	}
 
 	public void removeUser(String username) {
+        User userToRemove = null;
 		for (User user : users) {
 			if (user.getUsername().equals(username)) {
-				users.remove(user);
+				userToRemove = user;
 			}
 		}
+
+        if(userToRemove != null)
+            users.remove(userToRemove);
 	}
 
 	private static User createUser(long id, String username, String firstName,
