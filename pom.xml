@@ -121,25 +121,25 @@
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-json</artifactId>
-			<version>1.7</version>
+			<version>${jersey.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-client</artifactId>
-			<version>1.7</version>
+			<version>${jersey.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-server</artifactId>
-			<version>1.7</version>
+			<version>${jersey.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-core</artifactId>
-			<version>1.7</version>
+			<version>${jersey.version}</version>
 		</dependency>
 
 		<dependency>
@@ -157,37 +157,43 @@
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-plus</artifactId>
-			<version>7.1.6.v20100715</version>
+			<version>${jetty.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-util</artifactId>
-			<version>7.1.6.v20100715</version>
+			<version>${jetty.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-start</artifactId>
-			<version>7.1.6.v20100715</version>
+			<version>${jetty.version}</version>
 		</dependency>
 			
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-webapp</artifactId>
-			<version>7.1.6.v20100715</version>
+			<version>${jetty.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-deploy</artifactId>
-			<version>7.1.6.v20100715</version>
+			<version>${jetty.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+			<version>${jetty.version}</version>
 		</dependency>
 			
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-jsp-2.1</artifactId>
-			<version>7.1.6.v20100715</version>
+			<version>${jetty.version}</version>
 		</dependency>
 
 		<dependency>
@@ -199,20 +205,27 @@
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-jaxrs</artifactId>
-			<version>1.7.7</version>
+			<version>${jackson.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-xc</artifactId>
-			<version>1.7.7</version>
+			<version>${jackson.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.7.7</version>
+			<version>${jackson.version}</version>
 		</dependency>
 		
 	</dependencies>
+	
+	<properties>
+		<jetty.version>7.1.6.v20100715</jetty.version>
+		<jersey.version>1.7</jersey.version>
+		<jackson.version>1.7.7</jackson.version>
+	</properties>
+	
 </project>
