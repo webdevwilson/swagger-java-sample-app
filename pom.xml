@@ -55,6 +55,7 @@
 
 	<build>
 		<plugins>
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
@@ -63,6 +64,22 @@
 					<webXml>${project.basedir}/conf/web/web.xml</webXml>
 				</configuration>
 			</plugin>
+			
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<version>6.1.10</version>
+				<configuration>
+					<jettyConfig>${project.basedir}/conf/jetty/jetty.xml</jettyConfig>
+					<contextPath>/siteadmin</contextPath>
+					<!-- any better ideas? -->
+					<webAppSourceDirectory>target/${project.artifactId}-${project.version}</webAppSourceDirectory>
+					<webDefaultXml>${project.basedir}/conf/jetty/webdefault.xml</webDefaultXml>
+					<stopPort>9966</stopPort>
+					<stopKey>foo</stopKey>
+				</configuration>
+			</plugin>
+		
 		</plugins>
 	</build>
 
