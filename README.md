@@ -15,7 +15,7 @@ You need the following installed and available in your $PATH:
 
 <li>- Apachy ivy installed (from swagger-core)
 
-<br /> - or -
+ - or -
 
 <li>- Maven 2.2.1 or greater (http://maven.apache.org/)
 
