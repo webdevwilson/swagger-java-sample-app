@@ -10,12 +10,12 @@ server at http://petstore.swagger.wordnik.com/api/resources.json
 You need the following installed and available in your $PATH:
 
 <li>- Java 1.6 or greater (http://java.oracle.com)
-
 <li>- Apache ant 1.7 or greater (http://ant.apache.org/)
-
 <li>- Apachy ivy installed (from swagger-core)
+<br /> - or -
+<li>- Maven 2.2.1 or greater (http://maven.apache.org/)
 
-### To build
+### To build (with Ant)
 To build the stand-alone server, run this task:
 <pre>
 ant dist
@@ -33,6 +33,11 @@ cd dist
 This will start Jetty embedded on port 8002 with JDB enabled on port 8015.  If you have other services
 using these ports you can change the HTTP port in the conf/jetty/jetty.xml file.  The JDB port can be
 changed or disabled completely from the bin/run-dev.sh
+
+### To build (with Maven)
+<pre>
+mvn package jetty:run
+</pre>
 
 ### Testing the server
 Once started, you can navigate to http://localhost:8002/api/resources.json to view the Swagger Resource Listing.
