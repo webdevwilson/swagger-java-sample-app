@@ -10,9 +10,13 @@ server at http://petstore.swagger.wordnik.com/api/resources.json
 You need the following installed and available in your $PATH:
 
 <li>- Java 1.6 or greater (http://java.oracle.com)
+
 <li>- Apache ant 1.7 or greater (http://ant.apache.org/)
+
 <li>- Apachy ivy installed (from swagger-core)
+
 <br /> - or -
+
 <li>- Maven 2.2.1 or greater (http://maven.apache.org/)
 
 ### To build (with Ant)
