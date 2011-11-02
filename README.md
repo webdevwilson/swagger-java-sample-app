@@ -15,9 +15,7 @@ You need the following installed and available in your $PATH:
 
 <li>- Apachy ivy installed (from swagger-core)
 
- - or -
-
-<li>- Maven 2.2.1 or greater (http://maven.apache.org/)
+<li>- (optional) Maven 2.2.1 or greater (http://maven.apache.org/)
 
 ### To build (with Ant)
 To build the stand-alone server, run this task:
